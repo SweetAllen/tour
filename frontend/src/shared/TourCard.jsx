@@ -7,7 +7,7 @@ const TourCard = ({tour}) => {
 
     const {id, title, city,  photo, price, featured, reviews} = tour;
       
-
+    
 
     const {totalrating ,avgRating} =calculateAvgRating (reviews)
   
@@ -27,18 +27,21 @@ const TourCard = ({tour}) => {
                 </span>
                 <span className='tour_rating d-flex align-item-center  gap-1'>
 
-                <i class="ri-star-fill"></i> {avgRating === 0 ? null :avgRating} 
-                {totalrating === 0?  'Not rated' :( <span>({reviews.length})</span>
+                <i class="ri-star-fill"></i>
+                 {avgRating === 0 ? null :avgRating} 
+                {totalrating === 0?  'Not rated' :(
+                     <span>({reviews.length})</span>
 ) }
 </span>
             </div>
             <h5 className='tour_title'>
-                <Link to={`/tours/${id}`}>{title}</Link>
+                <Link to={`/tours/${id}`}>{id}</Link>
+                
             </h5>
             <div className='card_bottom  d-flex align-items-center justify-content-between mt-3'>
                 <h5>${price} <span>/per person</span></h5>
                 <button className='booking_btn'>
-                     <Link  to={`/tours/${id}`}>
+                     <Link to={`/tours/${id}`}>
                      Book now</Link>
                 </button>
             </div>

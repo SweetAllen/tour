@@ -177,7 +177,7 @@ const Home = () => {
 
 <Newletter/>
 <Tour/>
-<TourDetail/>
+{/* <TourDetail/> */}
     </>
 }
 export default Home;

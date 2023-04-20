@@ -27,7 +27,7 @@ const Tour = () => {
         <Container>
             <Row>
                 {
-                    tourData ?.map(tour => <Col lg='3' key={tour.id} className='mb-4'><TourCard tour={tour}/></Col>)
+                    tourData ?.map(tour => <Col lg='3' className='mb-4'><TourCard   tour={tour}/></Col>)
                 }
 
                 <Col lg='12'>
